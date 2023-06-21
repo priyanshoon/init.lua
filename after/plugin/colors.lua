@@ -1,10 +1,11 @@
-require('rose-pine').setup({
-    disable_background = true
+require('kanagawa').setup({
+    transparent = true,
 })
 
-function ColorMyPencils(color) 
-	color = color or "rose-pine"
+function ColorMyPencils(color)
+	color = color or "kanagawa"
 	vim.cmd.colorscheme(color)
+  vim.cmd("hi LineNr guibg=NONE")
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
