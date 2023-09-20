@@ -39,11 +39,7 @@ return require('packer').startup(function(use)
 				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 				ts_update()
 			end,}
-  use("nvim-treesitter/playground")
-  use("theprimeagen/harpoon")
-  use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
-  use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
 
   use {
@@ -68,10 +64,6 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-
-  use("folke/zen-mode.nvim")
-  use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
 
 end)
 
