@@ -32,7 +32,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -48,4 +47,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>r", "<cmd>:term printf 'priyanshoon your output is \\n****************************************************************************************************************************************\\n' && g++ -std=c++1z -o test %:r.cpp && ./test && printf '**********************************************************************************************************************************\\n' <CR>", {silent = true, noremap = true});
+vim.keymap.set("n", "<leader>f", "<cmd>:term printf 'priyanshoon your output is \\n****************************************************************************************************************************************\\n' && g++ -std=c++1z -o test %:r.cpp && ./test < input.txt && printf '****************************************************************************************************************************************\\n' <CR>", {silent = true});
 
